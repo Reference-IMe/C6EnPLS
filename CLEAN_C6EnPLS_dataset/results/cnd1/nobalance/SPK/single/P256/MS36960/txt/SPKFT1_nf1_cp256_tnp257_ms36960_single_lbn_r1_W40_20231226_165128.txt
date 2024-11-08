@@ -1,0 +1,122 @@
+Sender: LSF System <lsf@cresco6x137>
+Subject: Job 937527: <SPKFT1_nf1_cp256_tnp257_ms36960_single_lbn_r1_W40_20231226_165128> in cluster <portici> Done
+
+Job <SPKFT1_nf1_cp256_tnp257_ms36960_single_lbn_r1_W40_20231226_165128> was submitted from host <cresco6x002> by user <mcolonna> in cluster <portici>.
+Job was executed on host(s) <48*cresco6x137>, in queue <cresco6_48h24>, as user <mcolonna> in cluster <portici>.
+                            <48*cresco6x140>
+                            <48*cresco6x148>
+                            <48*cresco6x306>
+                            <48*cresco6x173>
+                            <48*cresco6x196>
+</afs/enea.it/por/user/mcolonna> was used as the home directory.
+</afs/enea.it/por/user/mcolonna/PFS/por/tirocinio/test_scripts> was used as the working directory.
+Started at Results reported on 
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+/gporq3/store_0/usr/mcolonna/tirocinio/test_scripts/src/launch.sh 257 - -no-cnd-set -no-cnd-readback -energy-reading -o /afs/enea.it/por/user/mcolonna/PFS/por/tirocinio/results/nobalance/SPK/single/P256/MS36960/csv/SPKFT1_nf1_cp256_tnp257_ms36960_single_lbn_r1_W40_20231226_165128.csv -r 1 -nm 36960 -ft 1 -npf 1 -fr 2 -fl 2 -nps 1 -spk-cp 18480 -spk-nb 22 -i /afs/enea.it/fra/user/artioli/PFS/tmp/data/test_matrices/single_rank36960_cnd1_seed1 -type single --run SPK-pSGESV-ft
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   10001.00 sec.
+    Max Memory :                                 14728 MB
+    Average Memory :                             7364.50 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              63
+    Max Threads :                                213
+    Run time :                                   47 sec.
+    Turnaround time :                            140374 sec.
+
+The output (if any) follows:
+
+
+ IMe test suite
+================
+     Total processes:               257
+     OMP threads:                   1
+     MPI ranks:                     257
+     BLACS grid:                    16x16
+     Calculate n.r.e.:              yes
+     IMe iterations:                36960
+     IMe blocking factor:           1
+     SPK iterations:                1680
+     SPK blocking factor:           22
+     Fault tolerance:               enabled = 1
+       Calc. processes:             256
+       Faulty processes:            1
+       Spare processes:             1
+     IMe failing rank:              2
+     IMe failing level:             2
+     SPK (IMe-like) failing level:  36958
+     SPK (IMe-like) failing iter.:  1679
+     Checkpoint skip interval:      18480 SPK iterations
+     Checkpoint freq.:              every 18481 SPK iterations | 406582 IMe iterations
+     Testing routines:
+       1 SPK-pSGESV-ft
+     Run repetitions:               1
+     Output file:                   /afs/enea.it/por/user/mcolonna/PFS/por/tirocinio/results/nobalance/SPK/single/P256/MS36960/csv/SPKFT1_nf1_cp256_tnp257_ms36960_single_lbn_r1_W40_20231226_165128.csv
+WRN> SPK-pSGESV-ft:                 blocking factor < 64
+   > SPK-pSGESV-ft:                 OK
+     Loading reference matrices from binary files..
+WRN> Condition number will not read back from loaded matrix
+     ..X
+     ..B
+     ..A
+     Matrix random generation seed: 1
+     Matrix size:                   36960x36960
+     Matrix condition number set:   1
+     Matrix condition number got:   -1
+WRN> Condition number (1) differs from read back (-1)
+
+ Run #1:
+  ## ..unrecoverable! exiting..
+ ## pgetrf_cpx: (00002) @ iter 36939 with fault 00001  occurred at 36958 < 36961
+
+** Dangerous exit code.. (-99)**
+SPK-pSGESV-ft                     Call    run time:         32 (25)	s	 nre: 1.41828632354736328
+
+ Summary:
+SPK-pSGESV-ft                     Total   run time:         32 (25)	s
+
+SPK-pSGESV-ft                     Average run time:         32 (25)	s	 nre: 1.41828632354736328
+
+SPK-pSGESV-ft                     Median  run time:         32 (25)	s	 nre: 1.41828632354736328
+
+ Energy counters:
+host                             zone  sub                       begin [uJ]                         end [uJ]
+cresco6x137.portici.enea.it         0    -                      32409788307                      36492381127
+cresco6x137.portici.enea.it         0    0                       5153156234                       5514957338
+cresco6x137.portici.enea.it         1    -                     101564529728                     105603229960
+cresco6x137.portici.enea.it         1    0                      48120077292                      48504596173
+cresco6x140.portici.enea.it         0    -                     105898556596                     109821896162
+cresco6x140.portici.enea.it         0    0                      48438648843                      48819704523
+cresco6x140.portici.enea.it         1    -                     141321435213                     145453961804
+cresco6x140.portici.enea.it         1    0                      16938577031                      17299135530
+cresco6x148.portici.enea.it         0    -                       4504153752                       8621420250
+cresco6x148.portici.enea.it         0    0                      36931403726                      37282811509
+cresco6x148.portici.enea.it         1    -                      81184406791                      85325257702
+cresco6x148.portici.enea.it         1    0                      24019863424                      24318409218
+cresco6x306.portici.enea.it         0    -                     177868374062                     182032537108
+cresco6x306.portici.enea.it         0    0                      36040470634                      36346467375
+cresco6x306.portici.enea.it         1    -                     132928347507                     137070240774
+cresco6x306.portici.enea.it         1    0                      54756474156                      55054927706
+cresco6x173.portici.enea.it         0    -                     170551130892                     174481239484
+cresco6x173.portici.enea.it         0    0                      49543012956                      49879490036
+cresco6x173.portici.enea.it         1    -                      30823931405                      34910789168
+cresco6x173.portici.enea.it         1    0                      44721433778                      45080648249
+cresco6x196.portici.enea.it         0    -                      40537834150                      41947208044
+cresco6x196.portici.enea.it         0    0                        757550506                        867307535
+cresco6x196.portici.enea.it         1    -                     184845783812                     188114150872
+cresco6x196.portici.enea.it         1    0                      39340314735                      39578623205
+
+
+PS:
+
+Read file </afs/enea.it/por/user/mcolonna/PFS/por/tirocinio/results/nobalance/SPK/single/P256/MS36960/err/SPKFT1_nf1_cp256_tnp257_ms36960_single_lbn_r1_W40_20231226_165128.err> for stderr output of this job.
+
