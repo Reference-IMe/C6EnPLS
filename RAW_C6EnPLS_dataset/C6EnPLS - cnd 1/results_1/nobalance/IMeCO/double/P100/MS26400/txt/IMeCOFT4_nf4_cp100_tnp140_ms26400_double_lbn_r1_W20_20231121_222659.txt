@@ -1,0 +1,111 @@
+Sender: LSF System <lsf@cresco6x321>
+Subject: Job 880028: <IMeCOFT4_nf4_cp100_tnp140_ms26400_double_lbn_r1_W20_20231121_222659> in cluster <portici> Done
+
+Job <IMeCOFT4_nf4_cp100_tnp140_ms26400_double_lbn_r1_W20_20231121_222659> was submitted from host <cresco6x002> by user <mcolonna> in cluster <portici>.
+Job was executed on host(s) <48*cresco6x321>, in queue <cresco6_48h24>, as user <mcolonna> in cluster <portici>.
+                            <48*cresco6x195>
+                            <48*cresco6x039>
+</afs/enea.it/por/user/mcolonna> was used as the home directory.
+</afs/enea.it/por/user/mcolonna/PFS/por/tirocinio/test_scripts> was used as the working directory.
+Started at Results reported on 
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+/gporq3/store_0/usr/mcolonna/tirocinio/test_scripts/src/launch.sh 140 - -no-cnd-set -no-cnd-readback -energy-reading -o /afs/enea.it/por/user/mcolonna/PFS/por/tirocinio/results/nobalance/IMeCO/double/P100/MS26400/csv/IMeCOFT4_nf4_cp100_tnp140_ms26400_double_lbn_r1_W20_20231121_222659.csv -r 1 -nm 26400 -ft 4 -npf 4 -fr 5 -fl 2 -nps 40 -i /afs/enea.it/fra/user/artioli/PFS/tmp/data/test_matrices/double_rank26400_cnd1_seed1 -type double --run IMe-pDGESV-co-ft
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   96656.57 sec.
+    Max Memory :                                 22621 MB
+    Average Memory :                             21288.13 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              151
+    Max Threads :                                583
+    Run time :                                   699 sec.
+    Turnaround time :                            31900 sec.
+
+The output (if any) follows:
+
+
+ IMe test suite
+================
+     Total processes:               140
+     OMP threads:                   1
+     MPI ranks:                     140
+     BLACS grid:                    10x10
+     Calculate n.r.e.:              yes
+     IMe iterations:                26400
+     IMe blocking factor:           1
+     SPK iterations:                6600
+     SPK blocking factor:           4
+     Fault tolerance:               enabled = 4
+       Calc. processes:             100
+       Faulty processes:            4
+       Spare processes:             40
+     IMe failing rank:              5
+     IMe failing level:             2
+     SPK (IMe-like) failing level:  26398
+     SPK (IMe-like) failing iter.:  6599
+     Checkpoint skip interval:      -1 SPK iterations
+     Checkpoint freq.:              never
+     Testing routines:
+       1 IMe-pDGESV-co-ft
+     Run repetitions:               1
+     Output file:                   /afs/enea.it/por/user/mcolonna/PFS/por/tirocinio/results/nobalance/IMeCO/double/P100/MS26400/csv/IMeCOFT4_nf4_cp100_tnp140_ms26400_double_lbn_r1_W20_20231121_222659.csv
+     Faulty ranks:                  5 6 7 8
+   > IMe-pDGESV-co-ft:              OK
+     Loading reference matrices from binary files..
+WRN> Condition number will not read back from loaded matrix
+     ..X
+     ..B
+     ..A
+     Matrix random generation seed: 1
+     Matrix size:                   26400x26400
+     Matrix condition number set:   1
+     Matrix condition number got:   -1
+WRN> Condition number (1) differs from read back (-1)
+
+ Run #1:
+## IMe-ft: rank 5 faulty at level 2
+## IMe-ft: rank 7 faulty at level 2
+## IMe-ft: rank 6 faulty at level 2
+## IMe-ft: rank 8 faulty at level 2
+## IMe-ft: rank 5 recovered at level 2
+## IMe-ft: rank 6 recovered at level 2
+## IMe-ft: rank 7 recovered at level 2
+## IMe-ft: rank 8 recovered at level 2
+IMe-pDGESV-co-ft                  Call    run time:        687 (684)	s	 nre: 0.00000000121393390
+
+ Summary:
+IMe-pDGESV-co-ft                  Total   run time:        687 (684)	s
+
+IMe-pDGESV-co-ft                  Average run time:        687 (684)	s	 nre: 0.00000000121393390
+
+IMe-pDGESV-co-ft                  Median  run time:        687 (684)	s	 nre: 0.00000000121393390
+
+ Energy counters:
+host                             zone  sub                       begin [uJ]                         end [uJ]
+cresco6x321.portici.enea.it         0    -                     257476219704                      75744914429
+cresco6x321.portici.enea.it         0    0                      30076035679                      41241216294
+cresco6x321.portici.enea.it         1    -                     202435333265                      25620471581
+cresco6x321.portici.enea.it         1    0                      44533082302                      58460046241
+cresco6x195.portici.enea.it         0    -                      66693506510                     143279723535
+cresco6x195.portici.enea.it         0    0                      22582924909                      29100726668
+cresco6x195.portici.enea.it         1    -                     246256400648                      64902137744
+cresco6x195.portici.enea.it         1    0                      21176566458                      30070568760
+cresco6x039.portici.enea.it         0    -                     173512935749                     244935800269
+cresco6x039.portici.enea.it         0    0                      40616740965                      47842381007
+cresco6x039.portici.enea.it         1    -                     245918320459                      70493988480
+cresco6x039.portici.enea.it         1    0                      37585175679                      49597873998
+
+
+PS:
+
+Read file </afs/enea.it/por/user/mcolonna/PFS/por/tirocinio/results/nobalance/IMeCO/double/P100/MS26400/err/IMeCOFT4_nf4_cp100_tnp140_ms26400_double_lbn_r1_W20_20231121_222659.err> for stderr output of this job.
+

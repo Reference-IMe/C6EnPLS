@@ -1,0 +1,150 @@
+Sender: LSF System <lsf@cresco6x017>
+Subject: Job 887366: <SPKFT4_nf4_cp484_tnp488_ms26400_single_lby_r1_W7_20231126_083100> in cluster <portici> Done
+
+Job <SPKFT4_nf4_cp484_tnp488_ms26400_single_lby_r1_W7_20231126_083100> was submitted from host <cresco6x002> by user <mcolonna> in cluster <portici>.
+Job was executed on host(s) <48*cresco6x017>, in queue <cresco6_48h24>, as user <mcolonna> in cluster <portici>.
+                            <48*cresco6x211>
+                            <48*cresco6x277>
+                            <48*cresco6x192>
+                            <48*cresco6x276>
+                            <48*cresco6x319>
+                            <48*cresco6x135>
+                            <48*cresco6x140>
+                            <48*cresco6x225>
+                            <48*cresco6x081>
+                            <48*cresco6x296>
+</afs/enea.it/por/user/mcolonna> was used as the home directory.
+</afs/enea.it/por/user/mcolonna/PFS/por/tirocinio/test_scripts> was used as the working directory.
+Started at Results reported on 
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+/gporq3/store_0/usr/mcolonna/tirocinio/test_scripts/src/launch.sh 488 23 -no-cnd-set -no-cnd-readback -energy-reading -o /afs/enea.it/por/user/mcolonna/PFS/por/tirocinio/results/balance/SPK/single/P484/MS26400/csv/SPKFT4_nf4_cp484_tnp488_ms26400_single_lby_r1_W7_20231126_083100.csv -r 1 -nm 26400 -ft 4 -npf 4 -fr 2 -fl 2 -nps 4 -spk-cp 13200 -spk-nb 24 -i /afs/enea.it/fra/user/artioli/PFS/tmp/data/test_matrices/single_rank26400_cnd1_seed1 -type single --run SPK-pSGESV-ft
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   5893.48 sec.
+    Max Memory :                                 1512 MB
+    Average Memory :                             1.00 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              71
+    Max Threads :                                215
+    Run time :                                   20 sec.
+    Turnaround time :                            147779 sec.
+
+The output (if any) follows:
+
+
+ IMe test suite
+================
+     Total processes:               488
+     OMP threads:                   1
+     MPI ranks:                     488
+     BLACS grid:                    22x22
+     Calculate n.r.e.:              yes
+     IMe iterations:                26400
+     IMe blocking factor:           1
+     SPK iterations:                1100
+     SPK blocking factor:           24
+     Fault tolerance:               enabled = 4
+       Calc. processes:             484
+       Faulty processes:            4
+       Spare processes:             4
+     IMe failing rank:              2
+     IMe failing level:             2
+     SPK (IMe-like) failing level:  26398
+     SPK (IMe-like) failing iter.:  1099
+     Checkpoint skip interval:      13200 SPK iterations
+     Checkpoint freq.:              every 13201 SPK iterations | 316824 IMe iterations
+     Testing routines:
+       1 SPK-pSGESV-ft
+     Run repetitions:               1
+     Output file:                   /afs/enea.it/por/user/mcolonna/PFS/por/tirocinio/results/balance/SPK/single/P484/MS26400/csv/SPKFT4_nf4_cp484_tnp488_ms26400_single_lby_r1_W7_20231126_083100.csv
+WRN> SPK-pSGESV-ft:                 blocking factor < 64
+   > SPK-pSGESV-ft:                 OK
+     Loading reference matrices from binary files..
+WRN> Condition number will not read back from loaded matrix
+     ..X
+     ..B
+     ..A
+     Matrix random generation seed: 1
+     Matrix size:                   26400x26400
+     Matrix condition number set:   1
+     Matrix condition number got:   -1
+WRN> Condition number (1) differs from read back (-1)
+
+ Run #1:
+ ## pgetrf_cpx: (00002) @ iter 26377 with fault 00001  occurred at 26398 < 26401
+ ## pgetrf_cpx: (00003) @ iter 26377 with fault 00001  occurred at 26398 < 26401
+ ## pgetrf_cpx: (00004) @ iter 26377 with fault 00001  occurred at 26398 < 26401
+ ## pgetrf_cpx: (00005) @ iter 26377 with fault 00001  occurred at 26398 < 26401
+  ## ..unrecoverable! exiting..
+
+** Dangerous exit code.. (-99)**
+SPK-pSGESV-ft                     Call    run time:          9 (5)	s	 nre: 1.41176378726959229
+
+ Summary:
+SPK-pSGESV-ft                     Total   run time:          9 (5)	s
+
+SPK-pSGESV-ft                     Average run time:          9 (5)	s	 nre: 1.41176378726959229
+
+SPK-pSGESV-ft                     Median  run time:          9 (5)	s	 nre: 1.41176378726959229
+
+ Energy counters:
+host                             zone  sub                       begin [uJ]                         end [uJ]
+cresco6x017.portici.enea.it         0    -                     138790125470                     139888212197
+cresco6x017.portici.enea.it         0    0                       7879065495                       7975869681
+cresco6x017.portici.enea.it         1    -                     136249240617                     137336122173
+cresco6x017.portici.enea.it         1    0                       3207231609                       3280244295
+cresco6x211.portici.enea.it         0    -                     189760052543                     190767701452
+cresco6x211.portici.enea.it         0    0                      63710945347                      63790732001
+cresco6x211.portici.enea.it         1    -                      74721995417                      75787737745
+cresco6x211.portici.enea.it         1    0                      31266274225                      31361121342
+cresco6x277.portici.enea.it         0    -                      96729829336                      97780758774
+cresco6x277.portici.enea.it         0    0                      29525520091                      29609508003
+cresco6x277.portici.enea.it         1    -                      18292335861                      19406375307
+cresco6x277.portici.enea.it         1    0                      61030035390                      61106291478
+cresco6x192.portici.enea.it         0    -                     218472056127                     219526393943
+cresco6x192.portici.enea.it         0    0                      32800959651                      32902750536
+cresco6x192.portici.enea.it         1    -                     125172652396                     126282969927
+cresco6x192.portici.enea.it         1    0                      55451799440                      55537953571
+cresco6x276.portici.enea.it         0    -                     162811263438                     163870126145
+cresco6x276.portici.enea.it         0    0                      59723451743                      59821607026
+cresco6x276.portici.enea.it         1    -                        608567228                       1737799384
+cresco6x276.portici.enea.it         1    0                      43962484377                      44029966358
+cresco6x319.portici.enea.it         0    -                      37633385042                      38697537347
+cresco6x319.portici.enea.it         0    0                      53648051809                      53737929624
+cresco6x319.portici.enea.it         1    -                     152747591387                     153848141365
+cresco6x319.portici.enea.it         1    0                      36972595992                      37045224098
+cresco6x135.portici.enea.it         0    -                     196171489804                     197214039625
+cresco6x135.portici.enea.it         0    0                      28415388444                      28491314265
+cresco6x135.portici.enea.it         1    -                     127408997867                     128493813816
+cresco6x135.portici.enea.it         1    0                      32085935541                      32146556007
+cresco6x140.portici.enea.it         0    -                     179161588769                     180207980744
+cresco6x140.portici.enea.it         0    0                      38150653642                      38237634999
+cresco6x140.portici.enea.it         1    -                      16176743682                      17279775648
+cresco6x140.portici.enea.it         1    0                      55216947301                      55300422066
+cresco6x225.portici.enea.it         0    -                     112407307207                     113468317674
+cresco6x225.portici.enea.it         0    0                      39576845238                      39660220966
+cresco6x225.portici.enea.it         1    -                     167348741813                     168444027156
+cresco6x225.portici.enea.it         1    0                      22682357069                      22773011925
+cresco6x081.portici.enea.it         0    -                     136704904368                     137751444169
+cresco6x081.portici.enea.it         0    0                      15073871477                      15154891709
+cresco6x081.portici.enea.it         1    -                     197365198784                     198407773935
+cresco6x081.portici.enea.it         1    0                      41949510516                      42034527476
+cresco6x296.portici.enea.it         0    -                      22581246574                      23136592686
+cresco6x296.portici.enea.it         0    0                      45873889081                      45930040754
+cresco6x296.portici.enea.it         1    -                      45872196531                      46966046209
+cresco6x296.portici.enea.it         1    0                         93305933                        155872819
+
+
+PS:
+
+Read file </afs/enea.it/por/user/mcolonna/PFS/por/tirocinio/results/balance/SPK/single/P484/MS26400/err/SPKFT4_nf4_cp484_tnp488_ms26400_single_lby_r1_W7_20231126_083100.err> for stderr output of this job.
+

@@ -1,0 +1,116 @@
+Sender: LSF System <lsf@cresco6x064>
+Subject: Job 940027: <IMeCOFT4_nf4_cp144_tnp192_ms31680_single_lbn_r1_W60_20231228_203247> in cluster <portici> Done
+
+Job <IMeCOFT4_nf4_cp144_tnp192_ms31680_single_lbn_r1_W60_20231228_203247> was submitted from host <cresco6x002> by user <mcolonna> in cluster <portici>.
+Job was executed on host(s) <48*cresco6x064>, in queue <cresco6_48h24>, as user <mcolonna> in cluster <portici>.
+                            <48*cresco6x251>
+                            <48*cresco6x081>
+                            <48*cresco6x169>
+</afs/enea.it/por/user/mcolonna> was used as the home directory.
+</afs/enea.it/por/user/mcolonna/PFS/por/tirocinio/test_scripts> was used as the working directory.
+Started at Results reported on 
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+/gporq3/store_0/usr/mcolonna/tirocinio/test_scripts/src/launch.sh 192 - -no-cnd-set -no-cnd-readback -energy-reading -o /afs/enea.it/por/user/mcolonna/PFS/por/tirocinio/results/nobalance/IMeCO/single/P144/MS31680/csv/IMeCOFT4_nf4_cp144_tnp192_ms31680_single_lbn_r1_W60_20231228_203247.csv -r 1 -nm 31680 -ft 4 -npf 4 -fr 5 -fl 2 -nps 48 -i /afs/enea.it/fra/user/artioli/PFS/tmp/data/test_matrices/single_rank31680_cnd1_seed1 -type single --run IMe-pSGESV-co-ft
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   92421.98 sec.
+    Max Memory :                                 23295 MB
+    Average Memory :                             18134.87 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              206
+    Max Threads :                                797
+    Run time :                                   489 sec.
+    Turnaround time :                            2746 sec.
+
+The output (if any) follows:
+
+
+ IMe test suite
+================
+     Total processes:               192
+     OMP threads:                   1
+     MPI ranks:                     192
+     BLACS grid:                    12x12
+     Calculate n.r.e.:              yes
+     IMe iterations:                31680
+     IMe blocking factor:           1
+     SPK iterations:                7920
+     SPK blocking factor:           4
+     Fault tolerance:               enabled = 4
+       Calc. processes:             144
+       Faulty processes:            4
+       Spare processes:             48
+     IMe failing rank:              5
+     IMe failing level:             2
+     SPK (IMe-like) failing level:  31678
+     SPK (IMe-like) failing iter.:  7919
+     Checkpoint skip interval:      -1 SPK iterations
+     Checkpoint freq.:              never
+     Testing routines:
+       1 IMe-pSGESV-co-ft
+     Run repetitions:               1
+     Output file:                   /afs/enea.it/por/user/mcolonna/PFS/por/tirocinio/results/nobalance/IMeCO/single/P144/MS31680/csv/IMeCOFT4_nf4_cp144_tnp192_ms31680_single_lbn_r1_W60_20231228_203247.csv
+     Faulty ranks:                  5 6 7 8
+   > IMe-pSGESV-co-ft:              OK
+     Loading reference matrices from binary files..
+WRN> Condition number will not read back from loaded matrix
+     ..X
+     ..B
+     ..A
+     Matrix random generation seed: 1
+     Matrix size:                   31680x31680
+     Matrix condition number set:   1
+     Matrix condition number got:   -1
+WRN> Condition number (1) differs from read back (-1)
+
+ Run #1:
+## IMe-ft: rank 7 faulty at level 2
+## IMe-ft: rank 8 faulty at level 2
+## IMe-ft: rank 5 faulty at level 2
+## IMe-ft: rank 6 faulty at level 2
+## IMe-ft: rank 5 recovered at level 2
+## IMe-ft: rank 6 recovered at level 2
+## IMe-ft: rank 7 recovered at level 2
+## IMe-ft: rank 8 recovered at level 2
+IMe-pSGESV-co-ft                  Call    run time:        427 (424)	s	 nre: -1.00000000000000000
+
+ Summary:
+IMe-pSGESV-co-ft                  Total   run time:        427 (424)	s
+
+IMe-pSGESV-co-ft                  Average run time:        427 (424)	s	 nre: -1.00000000000000000
+
+IMe-pSGESV-co-ft                  Median  run time:        427 (424)	s	 nre: -1.00000000000000000
+
+ Energy counters:
+host                             zone  sub                       begin [uJ]                         end [uJ]
+cresco6x064.portici.enea.it         0    -                      83322817576                     136630801835
+cresco6x064.portici.enea.it         0    0                      32653569320                      41377626198
+cresco6x064.portici.enea.it         1    -                     252542703281                      44343497259
+cresco6x064.portici.enea.it         1    0                      17164060460                      26375161152
+cresco6x251.portici.enea.it         0    -                     103348355971                     153583971448
+cresco6x251.portici.enea.it         0    0                       7999749493                      13302165657
+cresco6x251.portici.enea.it         1    -                     179734830832                     233428096026
+cresco6x251.portici.enea.it         1    0                      62477057370                       3427689523
+cresco6x081.portici.enea.it         0    -                     136784952502                     182858071554
+cresco6x081.portici.enea.it         0    0                      46973321912                      50358130569
+cresco6x081.portici.enea.it         1    -                     100132192757                     147140959072
+cresco6x081.portici.enea.it         1    0                      35621222528                      40464905877
+cresco6x169.portici.enea.it         0    -                       2986269271                      51881343501
+cresco6x169.portici.enea.it         0    0                      12594482532                      17698913622
+cresco6x169.portici.enea.it         1    -                     169366481032                     226723261444
+cresco6x169.portici.enea.it         1    0                      12426890356                      20286480267
+
+
+PS:
+
+Read file </afs/enea.it/por/user/mcolonna/PFS/por/tirocinio/results/nobalance/IMeCO/single/P144/MS31680/err/IMeCOFT4_nf4_cp144_tnp192_ms31680_single_lbn_r1_W60_20231228_203247.err> for stderr output of this job.
+
