@@ -1,0 +1,52 @@
+13 Nov 2024 - APPUNTI
+
+perf list restituisce l'out nel file allegato.
+Esiste una riga così:
+power/energy-pkg/                                  [Kernel PMU event]
+
+tuttavia l'invocazione del comando perf stat su un comando a caso (sleep 1) restituisce:
+
+[dloreti@pr-12 ~]$ perf stat -a -e power/energy-pkg/  sleep 1
+
+ Performance counter stats for 'system wide':
+
+   <not supported> Joules power/energy-pkg/u                                                    
+
+       1.002545310 seconds time elapsed
+
+da cui si evince che l'evento power/energy-pkg/ non è supportato.
+
+altri out rilevanti: 
+[dloreti@pr-12 ~]$ perf stat -e cache-misses date
+Wed Nov 13 05:07:59 PM CET 2024
+
+ Performance counter stats for 'date':
+
+             8,887      cache-misses:u                                                        
+
+       0.001902367 seconds time elapsed
+
+       0.000000000 seconds user
+       0.002106000 seconds sys
+
+---> da cui si evince che cache-misses è invece supportato
+
+[dloreti@pr-12 ~]$ perf stat -a -e bp_l1_tlb_miss_l2_tlb_hit date
+Error:
+Access to performance monitoring and observability operations is limited.
+Consider adjusting /proc/sys/kernel/perf_event_paranoid setting to open
+access to performance monitoring and observability operations for processes
+without CAP_PERFMON, CAP_SYS_PTRACE or CAP_SYS_ADMIN Linux capability.
+More information can be found at 'Perf events and tool security' document:
+https://www.kernel.org/doc/html/latest/admin-guide/perf-security.html
+perf_event_paranoid setting is 2:
+  -1: Allow use of (almost) all events by all users
+      Ignore mlock limit after perf_event_mlock_kb without CAP_IPC_LOCK
+>= 0: Disallow raw and ftrace function tracepoint access
+>= 1: Disallow CPU event access
+>= 2: Disallow kernel profiling
+To make the adjusted perf_event_paranoid setting permanent preserve it
+in /etc/sysctl.conf (e.g. kernel.perf_event_paranoid = <setting>)
+
+---> da cui si evince che bp_l1_tlb_miss_l2_tlb_hit è supportato ma l'utente dloreti non ha CAP_PERFMON priviledge e, pertanto, non può visualizzare il contatore.
+--->Perciò, se ne deduce che power/energy-pkg/ è veramente <not supported>. Non si tratta nemmeno di un problam di /perf_event_paranoid setting
