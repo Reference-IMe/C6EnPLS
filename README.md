@@ -6,16 +6,17 @@ Marcello Artioli, Andrea Borghesi, Marta Chinnici, Anna Ciampolini, Davide De Ch
 
 
 ### The repository is structured as follows.
-- **RAW_CeEnPLS folder**: reports all the data collected during the job runs. Some information might be replicated or difficult to locate there.
+- **RAW_C6EnPLS folder**: reports all the data collected during the job runs. Some information might be replicated or difficult to locate there.
 - **Test_scripts**: all the system scripts that allowed the collection of the data, including pre-execution and post-execution phases as described in [\[1\]](#paper)
-- **CLEAN_CeEnPLS** folder: orderly version of RAW_CeEnPLS. Here you can find:
-    - **jobs_data** folder: all the data collected about each job run. Data from different days are stored in different files.
+- **CLEAN_C6EnPLS** folder: orderly version of RAW_C6EnPLS. Here you can find:
+    - **jobs_spec** folder: specifics of each launched job, i.e., algorithm, number of executing/spare/total processes employed, distribution over the nodes' sockets, matrix size, fault tolerance level, number of injected faults and their location, etc.
+    - **jobs_data** folder: all the data collected about each job run (i.e., jobid, starting/ending timestamp, assigned physical nodes). Data from different days are stored in different files.
     - **sensors_data** folder: all the measurements collected by the sensors across the whole infrastructure. Measures from different days are stored in different files.
     - **results** folder: outputs, errors and information regarding each job run.
     - **sensors_measures_extraction.ipynb**: a jupyter notebook to extract valuable information from the sensors_data folder and produce the **sensors_measures.csv** file. This CSV file contains the sensors' measurements, each reporting the monitored node and the job-id of the job that was running on that node at the time of the measurement. For a detailed explanation of the fields, please refer to [\[2\]](#future)
     - **jobs_data_extraction.ipynb**: a jupyter notebook to extract valuable information from the jobs_data folder and produce the **jobs_data.csv** file. This CSV file reports all the information regarding the launch of any job. Fields have the following meanings:
         - jobid, unique id of the job 
-        - jobname, given-name of the job
+        - jobname, given name of the job
         - start_ts and end_ts, recorded start and end timestamps of the job
         - nodes, name of the nodes involved in the computation and number of processors used on each node in the format \<numer_of_processors\>*\<name_of_node1\>:\<numer_of_processors\>*\<name_of_node2\>: etc.
         - condition_n, condition number of the computed matrix
