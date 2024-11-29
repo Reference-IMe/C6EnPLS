@@ -31,7 +31,7 @@ Marcello Artioli, Andrea Borghesi, Marta Chinnici, Anna Ciampolini, Davide De Ch
         - total_proc, the total number of processors involved in the computation. It can be higher than computing_proc if some nodes are used as spare nodes to ensure fault tolerance
         - matrix_size, size of the matrix 
         - precision, double or single floating-point precision
-        - balanced, \[y,n\] if the computation is conducted with the same number of computing processors on each involved node
+        - balanced, \[y,n\] if the computation is conducted with the same number of computing processors on each of the two sockets of all involved nodes
         - repetition, repetition count 
         - req_whole_time, estimated whole-time of the job provided by the user at submission time
         - number_of_nodes, the total number of physical nodes involved in the computation
