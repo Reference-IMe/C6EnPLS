@@ -2,8 +2,7 @@
 C6EnPLS is a dataset of HPC jobs executed on CRESCO6 infrastructure. Each job refers to the execution of a linear solver. 
 
 ### If you find this dataset useful please consider citing:
-Marcello Artioli, Andrea Borghesi, Marta Chinnici, Anna Ciampolini, Davide De Chiara and Daniela Loreti, C6EnPLS: an HPC job dataset for the analysis of linear solvers' power consumption. To appear. 
-
+Artioli, M.; Borghesi, A.; Chinnici, M.; Ciampolini, A.; Colonna, M.; De Chiara, D.; Loreti, D. C6EnPLS: A High-Performance Computing Job Dataset for the Analysis of Linear Solvers’ Power Consumption. Future Internet 2025, 17, 203. https://doi.org/10.3390/fi17050203
 
 ### The repository is structured as follows.
 - **RAW_C6EnPLS folder**: reports all the data collected during the job runs. Some information might be replicated or difficult to locate there.
@@ -41,6 +40,6 @@ Marcello Artioli, Andrea Borghesi, Marta Chinnici, Anna Ciampolini, Davide De Ch
     
 
 ### References
-<a name="paper"></a> \[1\] Marcello Artioli, Andrea Borghesi, Marta Chinnici, Anna Ciampolini, Davide De Chiara and Daniela Loreti, C6EnPLS: an HPC job dataset for the analysis of linear solvers' power consumption. To appear. 
+<a name="paper"></a> \[1\] Artioli, M.; Borghesi, A.; Chinnici, M.; Ciampolini, A.; Colonna, M.; De Chiara, D.; Loreti, D. C6EnPLS: A High-Performance Computing Job Dataset for the Analysis of Linear Solvers’ Power Consumption. Future Internet 2025, 17, 203. https://doi.org/10.3390/fi17050203
 
 <a name="future"></a> \[2\] Yibrah Gebreyesus, Damian Dalton, Sebastian Nixon, Davide De Chiara and Marta Chinnici, Machine Learning for Data Center Optimizations: Feature Selection Using Shapley Additive exPlanation (SHAP). Future Internet 2023, 15, 88. https://doi.org/10.3390/fi15030088
